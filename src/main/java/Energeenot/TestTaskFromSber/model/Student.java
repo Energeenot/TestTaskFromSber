@@ -11,13 +11,14 @@ import lombok.*;
  * </p>
  */
 
-@Entity()
+@Entity
 @Table(name = "student")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Getter
 @Setter
+@ToString
 public class Student {
 
     /**
