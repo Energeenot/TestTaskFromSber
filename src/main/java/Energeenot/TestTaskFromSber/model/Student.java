@@ -1,9 +1,7 @@
 package Energeenot.TestTaskFromSber.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * Сущность, представляющая студента.
@@ -18,6 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Getter
+@Setter
 public class Student {
 
     /**
