@@ -61,12 +61,12 @@ public class StudentService {
     /**
      * Добавляет нового студента.
      *
-     * @param student объект {@link Student} для добавления.
+     * @param students объект {@link Student} для добавления.
      * @return добавленный объект {@link Student}.
      */
-    public Student addStudent(Student student) {
-        log.info("log: Попытка добавления нового студента {}", student.toString());
-        return studentRepository.save(student);
+    public List<Student> addStudent(List<Student> students) {
+        log.info("log: Попытка добавления нового студента {}", students.toString());
+        return studentRepository.saveAll(students);
     }
 
     /**
