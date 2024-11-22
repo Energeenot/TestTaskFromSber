@@ -53,7 +53,7 @@ public class StudentService {
         log.info("log: Вызван метод getStudentById с id {}", id);
         return studentRepository.findById(id).orElseThrow(() ->{
             log.error("log: Студент с id {} не найден", id);
-            return new ResponseStatusException(HttpStatus.NOT_FOUND, "Student not found");
+            return new ResponseStatusException(HttpStatus.NOT_FOUND, "Студент не найден");
         });
 
     }
@@ -82,7 +82,7 @@ public class StudentService {
         Student student = studentRepository.findById(id)
                 .orElseThrow(() ->{
                     log.error("log: При обновлении сущности: студент с id {} не найден", id);
-                    return new ResponseStatusException(HttpStatus.NOT_FOUND, "Student not found");
+                    return new ResponseStatusException(HttpStatus.NOT_FOUND, "Студент не найден");
                 });
 
         Optional.ofNullable(updatedStudent.getSurname()).ifPresent(student::setSurname);
