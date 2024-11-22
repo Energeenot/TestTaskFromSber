@@ -43,11 +43,9 @@ public class StudentService {
 
     /**
      * Возвращает студента по его идентификатору.
-     *<p>
      *     @param id идентификатор студента.
      *     @return объект {@link Student}.
      *     @throws ResponseStatusException если студент с указанным идентификатором не найден.
-     *</p>
      */
     public Student getStudentById(int id) {
         log.info("log: Вызван метод getStudentById с id {}", id);
