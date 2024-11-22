@@ -36,7 +36,7 @@ public class StudentController {
      */
     @GetMapping
     public List<Student> getAllStudents() {
-        log.info("log: Вызван метод getAllStudents");
+        log.info("log: Пришёл запрос на поиск всех студентов");
         return studentService.getAllStudents();
     }
 
@@ -54,7 +54,7 @@ public class StudentController {
      */
     @GetMapping("/{id}")
     public Student getStudentById(@PathVariable int id) {
-        log.info("log: Вызван метод getStudentById с id {}", id);
+        log.info("log: Пришёл запрос на поиск студента по id {}", id);
         return studentService.getStudentById(id);
     }
 
